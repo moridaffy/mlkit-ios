@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mlkit_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIv-0j-HNT">
+                                <rect key="frame" x="16" y="722" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gD0-yg-5w5"/>
+                                </constraints>
+                                <state key="normal" title="Open photo library"/>
+                                <connections>
+                                    <action selector="openPhotoLibraryButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z95-9N-3Fr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxe-xd-kRc">
+                                <rect key="frame" x="16" y="674" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eKS-Ia-wr1"/>
+                                </constraints>
+                                <state key="normal" title="Open camera"/>
+                                <connections>
+                                    <action selector="openCameraButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Evs-p2-6fa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhT-Y5-wfq">
+                                <rect key="frame" x="16" y="60" width="343" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="EAv-23-8ma"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">mlkit-ios
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="28" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="by @moridaffy">
+                                        <attributes>
+                                            <font key="NSFont" size="15" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hg5-kL-7pt">
+                                <rect key="frame" x="16" y="144" width="343" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="zRK-Ns-Kod"/>
+                                </constraints>
+                                <string key="text">Please, make a photo (or use existing photo from photo library) of an apple, orange or banana. App will try to guess the fruit using MLKit</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hen-RL-Igr">
+                                <rect key="frame" x="16" y="287" width="343" height="355"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App thinks it's a..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jdU-Wj-3GB">
+                                <rect key="frame" x="16" y="258" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="vg9-BU-urh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hen-RL-Igr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1te-Ys-u2Z"/>
+                            <constraint firstItem="Sxe-xd-kRc" firstAttribute="top" secondItem="hen-RL-Igr" secondAttribute="bottom" constant="32" id="3l9-aB-Jk2"/>
+                            <constraint firstItem="hg5-kL-7pt" firstAttribute="top" secondItem="OhT-Y5-wfq" secondAttribute="bottom" constant="32" id="4XW-H6-AiX"/>
+                            <constraint firstItem="hen-RL-Igr" firstAttribute="top" secondItem="jdU-Wj-3GB" secondAttribute="bottom" constant="8" id="5PS-cT-OOM"/>
+                            <constraint firstItem="hg5-kL-7pt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DS0-ul-hGP"/>
+                            <constraint firstItem="hen-RL-Igr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="G49-Us-n8U"/>
+                            <constraint firstItem="jdU-Wj-3GB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HZ9-Na-hqd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hen-RL-Igr" secondAttribute="trailing" constant="16" id="Kc2-ok-bD5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hg5-kL-7pt" secondAttribute="trailing" constant="16" id="Piw-dX-SGr"/>
+                            <constraint firstItem="jdU-Wj-3GB" firstAttribute="top" secondItem="hg5-kL-7pt" secondAttribute="bottom" constant="32" id="TT2-bQ-Cbn"/>
+                            <constraint firstItem="Sxe-xd-kRc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ws3-y9-AY3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mIv-0j-HNT" secondAttribute="trailing" constant="16" id="Y5b-VC-5s0"/>
+                            <constraint firstItem="OhT-Y5-wfq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Y99-pZ-c1F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mIv-0j-HNT" secondAttribute="bottom" constant="16" id="ZkZ-fW-wXF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OhT-Y5-wfq" secondAttribute="trailing" constant="16" id="lea-gP-x7h"/>
+                            <constraint firstItem="mIv-0j-HNT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qNp-GR-6Dc"/>
+                            <constraint firstItem="mIv-0j-HNT" firstAttribute="top" secondItem="Sxe-xd-kRc" secondAttribute="bottom" constant="8" id="r7f-b9-EaF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sxe-xd-kRc" secondAttribute="trailing" constant="16" id="sKk-Wu-iXt"/>
+                            <constraint firstItem="OhT-Y5-wfq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tSz-sg-IIl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jdU-Wj-3GB" secondAttribute="trailing" constant="16" id="v4R-bb-0Iv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="instructionsLabel" destination="hg5-kL-7pt" id="NIJ-RQ-Cq3"/>
+                        <outlet property="openCamerButton" destination="Sxe-xd-kRc" id="D56-DK-CtX"/>
+                        <outlet property="openPhotoLibraryButton" destination="mIv-0j-HNT" id="vvc-ux-Yxc"/>
+                        <outlet property="photoImageView" destination="hen-RL-Igr" id="apH-sH-lti"/>
+                        <outlet property="resultLabel" destination="jdU-Wj-3GB" id="yPe-uN-PTl"/>
+                        <outlet property="titleLabel" destination="OhT-Y5-wfq" id="PpS-5I-ZR0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
